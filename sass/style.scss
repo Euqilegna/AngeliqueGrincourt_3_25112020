@@ -1,8 +1,34 @@
-/*Mobile*/
-@import 'petite_resolution';
 
-/*Tablette*/
-@import 'moyenne_resolution';
+/*Utils*/
+@import './Utils/variables'; 
+@import './Utils/fonctions'; 
+@import'./Utils/mixins';
 
-/*PC*/
-@import 'grande_resolution'; 
+/*Base*/
+@import'./Base/base';
+@import'./Base/typographie';
+
+/*Composants*/
+@import'./Composants/btn';
+@import'./Composants/cards';
+
+
+/*Layouts*/
+@import'./Layout/container';
+@import'./Layout/header';
+@import'./Layout/footer';
+
+/*Pages*/
+
+@import'./Pages/localisation';
+@import'./Pages/banner';
+@import'./Pages/fonctionnement';
+@import'./Pages/_cardRestaurants';
+
+
+
+/*Themes*/
+
+
+
+

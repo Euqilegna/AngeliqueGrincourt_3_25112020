@@ -1,0 +1,23 @@
+footer {
+    padding: 15px 20px;
+    background-color: #353535;
+    color: white;
+    text-align: left;
+    @include mobile-only {
+        display: grid;
+    }
+    p {
+        font-family: "Shrikhand";
+    }
+    i {
+        margin: 5px;
+    }
+    span {
+        margin: 3px;
+        font-weight: 500;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

@@ -1,0 +1,41 @@
+#restaurants{
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+#restaurant1{
+    position: relative;
+    background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    height: 177px;
+}
+
+.cardRestaurant {
+   border-radius: 20px;
+   margin: 15px 20px;
+    
+}
+
+.cardDescription{
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.newEncart{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    right: 10px;
+    background-color: #99e2d0;
+    color:#008766; 
+    font-weight: bold;
+    padding: 10px;
+}

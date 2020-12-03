@@ -1,0 +1,9 @@
+#logoOMF{
+    display: block;
+    margin: 10px auto;
+
+    @include mobile-only{
+        width: 40%;
+    }
+    
+}
