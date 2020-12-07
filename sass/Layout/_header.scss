@@ -1,5 +1,14 @@
-#logoOMF{
-    display: block;
+.header{
+    display: flex;
+    align-items: center;
+}
+.header__return{
+    position: absolute;
+    left: 30px;
+    color: black;
+}
+
+.header__logo{
     margin: 10px auto;
 
     @include mobile-only{

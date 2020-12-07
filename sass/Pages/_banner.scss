@@ -1,12 +1,35 @@
-#banner{
-    background-color: #f6f6f6 ;
-    text-align: center;
-    padding-bottom: 20px;
-}
+.banner {
+    background-color: #f6f6f6;
+        padding-bottom: 30px;
 
-#topDescription{
-    padding: 0 40px;
-    span {
-        font-weight: 300;
+    .banner__localisation {
+        display: flex;
+        align-items: baseline;
+        background-color: #cecece;
+        justify-content: center;
+
+        span {
+            margin: 10px;
+        }
+    }
+
+    .banner__topDescription {
+        padding: 20px 45px 0px;
+        text-align: center;
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .banner__buttonBanner {
+        &--btn {
+            width: 50%;
+            margin: 20px auto;
+            border-radius: 30px;
+            background: linear-gradient(to left top, #9356dc, #ff79da);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
     }
 }

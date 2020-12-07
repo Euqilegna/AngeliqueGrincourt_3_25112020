@@ -1,41 +1,81 @@
-#restaurants{
+#restaurants {
     background-color: #f2f2f2;
-    padding: 10px;
-}
-
-#restaurant1{
-    position: relative;
-    background-image: url("/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 90%;
-    height: 177px;
+    padding: 20px 15px 40px 15px;
 }
 
 .cardRestaurant {
-   border-radius: 20px;
-   margin: 15px 20px;
-    
-}
+    position: relative;
+    height: 245px;
+    margin: 15px 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px 2px #cecece;
+    overflow: hidden;
 
-.cardDescription{
-    background-color: white;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    .card__image {
+        &--background {
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-size: cover;
+            margin-top: -45px;
+        }
+    }
 
-}
+    #img2{
+        margin-top: -155px;
+    }
 
-.newEncart{
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    right: 10px;
-    background-color: #99e2d0;
-    color:#008766; 
-    font-weight: bold;
-    padding: 10px;
+    .newEncart {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        background-color: #99e2d0;
+        color: #008766;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .card__content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 65px;
+        background-color: white;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        .card__title {
+            margin: 15px 0px 0 15px;
+        }
+
+        .card__description {
+            margin: 3px 15px;
+        }
+
+        .card__like {
+            span {
+                font-size: 25px;
+                position: absolute;
+                top: 20px;
+                right: 40px;
+            }
+
+            &--notLiked {
+                visibility: visible;
+            }
+
+            &--liked {
+                visibility: hidden;
+            }
+
+            &:hover {
+                .card__like--notLiked {
+                    visibility: hidden;
+                }
+                .card__like--liked {
+                    visibility: visible;
+                }
+            }
+        }
+    }
 }

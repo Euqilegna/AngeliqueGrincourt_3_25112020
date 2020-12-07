@@ -1,12 +1,12 @@
-section{
-    margin-bottom: 50px;
+.fonctionnement{
+    padding-bottom: 30px;
     h2{
         margin: 30px;
     }
 }
 
 
-.cardSection2{
+.card__btn{
     position: relative;
     background-color: #f6f6f6;
     border-radius: 15px;
@@ -26,24 +26,24 @@ section{
         i{
             color: $primaryColor ;
         }
-    }    
-}
-
-.pastille{
-    position: absolute;
-    background-color: $primaryColor;
-    width: 15px;
-    height: 15px;
-    border-radius: 50px;
-    left: -10px;
-    top: 18px;
-    padding: 3px;
-    color: white;
-    font-weight: 400;
-    font-size: 13px;
-    p{
-        display: flex;
-        justify-content: center;
-        margin: auto;
+    }   
+    .pastille{
+        position: absolute;
+        background-color: $primaryColor;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        left: -10px;
+        top: 18px;
+        padding: 3px;
+        color: white;
+        font-weight: 400;
+        font-size: 13px;
+        p{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
     }
 }
+

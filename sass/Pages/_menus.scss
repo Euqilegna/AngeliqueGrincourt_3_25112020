@@ -1,0 +1,56 @@
+.presentation__restaurant {
+    position: relative;
+    .presentation__image {
+        &--background {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
+    }
+
+    .presentation__menu {
+        position: absolute;
+        top: 195px;
+        background-color: #cecece;
+        width: 100%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .menu__title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 20px;
+        h3 {
+            font-family: $titleFont;
+        }
+
+        .card__like {
+            span {
+                font-size: 25px;
+                position: absolute;
+                top: 50px;
+                right: 30px;
+            }
+
+            &--notLiked {
+                visibility: visible;
+            }
+
+            &--liked {
+                visibility: hidden;
+            }
+
+            &:hover {
+                .card__like--notLiked {
+                    visibility: hidden;
+                }
+                .card__like--liked {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
