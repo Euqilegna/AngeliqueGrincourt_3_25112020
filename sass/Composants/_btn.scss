@@ -1,0 +1,55 @@
+.card__btn {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 1rem;
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 2px 10px #d2d2d2;
+    &--width {
+        width: 80%;
+        padding: 10px;
+        &:hover {
+            background :none !important;
+        }
+    }
+    i {
+        color: grey;
+        margin: 5px 10px;
+    }
+    &:hover {
+        background-color: #f5edff;
+        i {
+            color: $primaryColor;
+        }
+    }
+}
+
+.btn {
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 30px;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    &--color {
+        background: linear-gradient(to left top, #9356dc, #ff79da);
+    }
+}
+
+.menu__button {
+    display: flex;
+    align-items: center;
+    &--btn {
+        width: 50%;
+        margin: 20px auto;
+        border-radius: 30px;
+        background: linear-gradient(to left top, #9356dc, #ff79da);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+}

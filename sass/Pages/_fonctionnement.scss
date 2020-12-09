@@ -1,49 +1,25 @@
-.fonctionnement{
+.fonctionnement {
     padding-bottom: 30px;
-    h2{
+    h2 {
         margin: 30px;
     }
 }
 
-
-.card__btn{
-    position: relative;
-    background-color: #f6f6f6;
-    border-radius: 15px;
-    padding: 1rem;
-    display: block;
-    width: 70%;
-    margin: 20px auto;
-    color: black;
-    font-weight: bold;
-    box-shadow: 0px 2px 10px #d2d2d2;
-    i{
-        color: grey;
-        margin: 5px 10px;
-    }
-    &:hover{
-        background-color: #f5edff;
-        i{
-            color: $primaryColor ;
-        }
-    }   
-    .pastille{
-        position: absolute;
-        background-color: $primaryColor;
-        width: 15px;
-        height: 15px;
-        border-radius: 50px;
-        left: -10px;
-        top: 18px;
-        padding: 3px;
-        color: white;
-        font-weight: 400;
-        font-size: 13px;
-        p{
-            display: flex;
-            justify-content: center;
-            margin: auto;
-        }
+.pastille {
+    position: absolute;
+    background-color: $primaryColor;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    left: -10px;
+    top: 18px;
+    padding: 3px;
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    p {
+        display: flex;
+        justify-content: center;
+        margin: auto;
     }
 }
-

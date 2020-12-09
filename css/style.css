@@ -18,6 +18,115 @@ body {
 }
 
 /*Composants*/
+.card__btn {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 1rem;
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 2px 10px #d2d2d2;
+}
+.card__btn--width {
+  width: 80%;
+  padding: 10px;
+}
+.card__btn--width:hover {
+  background: none !important;
+}
+.card__btn i {
+  color: grey;
+  margin: 5px 10px;
+}
+.card__btn:hover {
+  background-color: #f5edff;
+}
+.card__btn:hover i {
+  color: #9356DC;
+}
+
+.btn {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 30px;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.btn--color {
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+}
+
+.menu__button {
+  display: flex;
+  align-items: center;
+}
+.menu__button--btn {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 30px;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__btn .card__menuContent .menuContent__title {
+  margin: 3px 0;
+}
+.card__btn .card__menuContent .menuContent__description {
+  font-weight: lighter;
+  font-size: 14px;
+  display: block;
+  width: 80%;
+}
+.card__btn .card__menuContent .menuContent__price {
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  color: #494949;
+}
+.card__btn .card__menuContent .menuContent__check {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  height: 100%;
+  width: 0;
+  background-color: #9be3d1;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.card__btn .card__menuContent .menuContent__check--position {
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  color: white;
+}
+.card__btn .card__menuContent:hover .menuContent__description {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__btn .card__menuContent:hover .menuContent__price {
+  right: 70px;
+}
+.card__btn .card__menuContent:hover .menuContent__check {
+  visibility: visible;
+  width: 17%;
+  transition: 0.4s all;
+}
+.card__btn .card__menuContent:hover .menuContent__check--position {
+  transition-duration: 0.5s;
+  transform: rotate(360deg);
+}
+
 /*Layouts*/
 .header {
   display: flex;
@@ -99,15 +208,6 @@ footer a {
 .banner .banner__topDescription span {
   font-weight: 300;
 }
-.banner .banner__buttonBanner--btn {
-  width: 50%;
-  margin: 20px auto;
-  border-radius: 30px;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
 
 .fonctionnement {
   padding-bottom: 30px;
@@ -116,29 +216,7 @@ footer a {
   margin: 30px;
 }
 
-.card__btn {
-  position: relative;
-  background-color: #f6f6f6;
-  border-radius: 15px;
-  padding: 1rem;
-  display: block;
-  width: 70%;
-  margin: 20px auto;
-  color: black;
-  font-weight: bold;
-  box-shadow: 0px 2px 10px #d2d2d2;
-}
-.card__btn i {
-  color: grey;
-  margin: 5px 10px;
-}
-.card__btn:hover {
-  background-color: #f5edff;
-}
-.card__btn:hover i {
-  color: #9356DC;
-}
-.card__btn .pastille {
+.pastille {
   position: absolute;
   background-color: #9356DC;
   width: 15px;
@@ -151,7 +229,7 @@ footer a {
   font-weight: 400;
   font-size: 13px;
 }
-.card__btn .pastille p {
+.pastille p {
   display: flex;
   justify-content: center;
   margin: auto;
@@ -176,9 +254,6 @@ footer a {
   border-top-right-radius: 20px;
   background-size: cover;
   margin-top: -45px;
-}
-.cardRestaurant #img2 {
-  margin-top: -155px;
 }
 .cardRestaurant .newEncart {
   position: absolute;
@@ -223,6 +298,10 @@ footer a {
   visibility: visible;
 }
 
+#img2 {
+  margin-top: -155px;
+}
+
 .presentation__restaurant {
   position: relative;
 }
@@ -232,12 +311,14 @@ footer a {
   background-size: cover;
 }
 .presentation__restaurant .presentation__menu {
-  position: absolute;
-  top: 195px;
-  background-color: #cecece;
+  position: relative;
+  top: -55px;
+  background-color: #f6f6f6;
   width: 100%;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  padding-bottom: 55px;
+  margin-bottom: -55px;
 }
 .presentation__restaurant .menu__title {
   display: flex;
@@ -266,6 +347,14 @@ footer a {
 }
 .presentation__restaurant .menu__title .card__like:hover .card__like--liked {
   visibility: visible;
+}
+.presentation__restaurant .menu__subheading {
+  font-weight: 300;
+  margin-left: 25px;
+  padding-bottom: 3px;
+  display: block;
+  width: 12%;
+  border-bottom: 3px solid #99e2d0;
 }
 
 /*Themes*/

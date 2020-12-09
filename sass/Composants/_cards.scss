@@ -1,0 +1,58 @@
+.card__btn {
+    .card__menuContent {
+        .menuContent__title {
+            margin: 3px 0;
+        }
+        .menuContent__description {
+            font-weight: lighter;
+            font-size: 14px;
+            display: block;
+            width: 80%;
+        }
+        .menuContent__price {
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            color: #494949;
+        }
+        .menuContent__check {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+            height: 100%;
+            width: 0;
+            background-color: #9be3d1;
+            color: white;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            &--position {
+                position: absolute;
+                top: 18px;
+                right: 8px;
+                color: white;
+            }
+        }
+        &:hover {
+            .menuContent__description {
+                width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .menuContent__price {
+                right: 70px;
+            }
+            .menuContent__check {
+                visibility: visible;
+                width: 17%;
+                transition: .4s all;
+                &--position {
+                    transition-duration: .5s;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

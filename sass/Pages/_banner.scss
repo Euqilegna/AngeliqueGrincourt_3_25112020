@@ -20,16 +20,4 @@
             font-weight: 300;
         }
     }
-
-    .banner__buttonBanner {
-        &--btn {
-            width: 50%;
-            margin: 20px auto;
-            border-radius: 30px;
-            background: linear-gradient(to left top, #9356dc, #ff79da);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-    }
 }
