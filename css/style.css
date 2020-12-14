@@ -13,6 +13,23 @@ section {
   margin: 0 !important;
 }
 
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid black;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -30,11 +47,12 @@ body {
   font-weight: bold;
   box-shadow: 0px 2px 10px #d2d2d2;
 }
-.card__btn--width {
+.card__btn--slide {
   width: 80%;
   padding: 10px;
+  animation: slide 1s;
 }
-.card__btn--width:hover {
+.card__btn--slide:hover {
   background: none !important;
 }
 .card__btn i {
@@ -46,6 +64,16 @@ body {
 }
 .card__btn:hover i {
   color: #9356DC;
+}
+@keyframes slide {
+  from {
+    top: 20px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 .btn {
@@ -195,8 +223,9 @@ footer a {
 .banner .banner__localisation {
   display: flex;
   align-items: baseline;
-  background-color: #cecece;
+  background-color: #eaeaea;
   justify-content: center;
+  box-shadow: inset 0px 7px 4px -4px #cacaca;
 }
 .banner .banner__localisation span {
   margin: 10px;
@@ -248,12 +277,15 @@ footer a {
   box-shadow: 3px 3px 6px 2px #cecece;
   overflow: hidden;
 }
-.cardRestaurant .card__image--background {
+.cardRestaurant .card__image {
   width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-size: cover;
-  margin-top: -45px;
+  height: 175px;
+  object-fit: cover;
+  object-position: bottom;
+}
+.cardRestaurant .card__image--fit {
+  object-fit: cover;
+  object-position: 0 62%;
 }
 .cardRestaurant .newEncart {
   position: absolute;
@@ -268,10 +300,14 @@ footer a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 65px;
+  height: 70px;
   background-color: white;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+.cardRestaurant .card__content a {
+  color: black;
+  text-decoration: none;
 }
 .cardRestaurant .card__content .card__title {
   margin: 15px 0px 0 15px;
@@ -296,19 +332,18 @@ footer a {
 }
 .cardRestaurant .card__content .card__like:hover .card__like--liked {
   visibility: visible;
-}
-
-#img2 {
-  margin-top: -155px;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .presentation__restaurant {
   position: relative;
 }
-.presentation__restaurant .presentation__image--background {
+.presentation__restaurant .presentation__image {
   width: 100%;
-  height: 100%;
-  background-size: cover;
+  height: 250px;
+  object-fit: cover;
 }
 .presentation__restaurant .presentation__menu {
   position: relative;
@@ -347,6 +382,9 @@ footer a {
 }
 .presentation__restaurant .menu__title .card__like:hover .card__like--liked {
   visibility: visible;
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .presentation__restaurant .menu__subheading {
   font-weight: 300;
