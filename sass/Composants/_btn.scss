@@ -13,7 +13,7 @@
     &--slide {
         width: 80%;
         padding: 10px;
-        animation: slide 1s;
+        animation: slide;
         &:hover {
             background: none !important;
         }
@@ -47,21 +47,16 @@
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0px 3px 6px 2px #c3c3c3;
     &--color {
         background: $linear-gradiant;
+        &:hover{
+            background: $linear-gradiant-lighten;
+            box-shadow: 0px 3px 6px 2px #969696;
+        }
     }
 }
 
 .menu__button {
     display: flex;
-    align-items: center;
-    &--btn {
-        width: 50%;
-        margin: 20px auto;
-        border-radius: 30px;
-        background: $linear-gradiant;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-    }
 }

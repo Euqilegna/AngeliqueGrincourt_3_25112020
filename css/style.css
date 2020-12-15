@@ -13,23 +13,6 @@ section {
   margin: 0 !important;
 }
 
-.loader {
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid black;
-  width: 70px;
-  height: 70px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -50,7 +33,7 @@ body {
 .card__btn--slide {
   width: 80%;
   padding: 10px;
-  animation: slide 1s;
+  animation: slide;
 }
 .card__btn--slide:hover {
   background: none !important;
@@ -83,23 +66,18 @@ body {
   color: white;
   padding: 1rem;
   text-align: center;
+  box-shadow: 0px 3px 6px 2px #c3c3c3;
 }
 .btn--color {
-  background: linear-gradient(to left top, #9356dc, #ff79da);
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+}
+.btn--color:hover {
+  background: linear-gradient(to left top, #a16be0, #ff93e1);
+  box-shadow: 0px 3px 6px 2px #969696;
 }
 
 .menu__button {
   display: flex;
-  align-items: center;
-}
-.menu__button--btn {
-  width: 50%;
-  margin: 20px auto;
-  border-radius: 30px;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
-  color: white;
-  padding: 1rem;
-  text-align: center;
 }
 
 .card__btn .card__menuContent .menuContent__title {
@@ -332,7 +310,7 @@ footer a {
 }
 .cardRestaurant .card__content .card__like:hover .card__like--liked {
   visibility: visible;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -382,9 +360,21 @@ footer a {
 }
 .presentation__restaurant .menu__title .card__like:hover .card__like--liked {
   visibility: visible;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.presentation__restaurant .menu__category .card__btn:nth-child(2) {
+  animation-duration: 1s;
+}
+.presentation__restaurant .menu__category .card__btn:nth-child(3) {
+  animation-duration: 2s;
+}
+.presentation__restaurant .menu__category .card__btn:nth-child(4) {
+  animation-duration: 3s;
+}
+.presentation__restaurant .menu__category .card__btn:nth-child(5) {
+  animation-duration: 4s;
 }
 .presentation__restaurant .menu__subheading {
   font-weight: 300;
