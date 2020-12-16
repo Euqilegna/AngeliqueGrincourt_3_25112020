@@ -18,35 +18,78 @@ body {
 }
 
 /*Composants*/
-.card__btn {
+.btn {
+  width: 50%;
+  margin: 20px auto;
+  border-radius: 30px;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 6px 2px #c3c3c3;
+  cursor: pointer;
+}
+.btn--color {
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+}
+.btn--color:hover {
+  background: linear-gradient(to left top, #a16be0, #ff93e1);
+  box-shadow: 0px 3px 6px 2px #969696;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .btn {
+    width: 15%;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .btn {
+    width: 25%;
+    margin-top: 40px;
+  }
+}
+
+.menu__button {
+  display: flex;
+}
+
+.card {
   position: relative;
   background-color: #f6f6f6;
   border-radius: 15px;
   padding: 1rem;
   display: block;
-  width: 70%;
   margin: 20px auto;
   color: black;
   font-weight: bold;
   box-shadow: 0px 2px 10px #d2d2d2;
 }
-.card__btn--slide {
-  width: 80%;
-  padding: 10px;
-  animation: slide;
+.card__fonctionnement {
+  width: 70%;
 }
-.card__btn--slide:hover {
-  background: none !important;
-}
-.card__btn i {
+.card__fonctionnement i {
   color: grey;
   margin: 5px 10px;
 }
-.card__btn:hover {
+.card__fonctionnement:hover {
   background-color: #f5edff;
 }
-.card__btn:hover i {
+.card__fonctionnement:hover i {
   color: #9356DC;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .card__fonctionnement {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .card__fonctionnement {
+    width: 30%;
+  }
+}
+.card__menu {
+  width: 80%;
+  padding: 10px;
+  animation: slide;
 }
 @keyframes slide {
   from {
@@ -58,44 +101,27 @@ body {
     opacity: 1;
   }
 }
-
-.btn {
-  width: 50%;
-  margin: 20px auto;
-  border-radius: 30px;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0px 3px 6px 2px #c3c3c3;
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .card__menu {
+    width: 100%;
+  }
 }
-.btn--color {
-  background: linear-gradient(to left top, #9356DC, #FF79DA);
-}
-.btn--color:hover {
-  background: linear-gradient(to left top, #a16be0, #ff93e1);
-  box-shadow: 0px 3px 6px 2px #969696;
-}
-
-.menu__button {
-  display: flex;
-}
-
-.card__btn .card__menuContent .menuContent__title {
+.card .card__menuContent .menuContent__title {
   margin: 3px 0;
 }
-.card__btn .card__menuContent .menuContent__description {
+.card .card__menuContent .menuContent__description {
   font-weight: lighter;
   font-size: 14px;
   display: block;
   width: 80%;
 }
-.card__btn .card__menuContent .menuContent__price {
+.card .card__menuContent .menuContent__price {
   position: absolute;
   top: 35px;
   right: 25px;
   color: #494949;
 }
-.card__btn .card__menuContent .menuContent__check {
+.card .card__menuContent .menuContent__check {
   visibility: hidden;
   position: absolute;
   right: 0;
@@ -107,42 +133,62 @@ body {
   color: white;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  cursor: pointer;
 }
-.card__btn .card__menuContent .menuContent__check--position {
+.card .card__menuContent .menuContent__check--position {
   position: absolute;
-  top: 18px;
-  right: 8px;
+  top: 20px;
+  right: 17px;
   color: white;
 }
-.card__btn .card__menuContent:hover .menuContent__description {
+.card .card__menuContent:hover .menuContent__description {
   width: 70%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card__btn .card__menuContent:hover .menuContent__price {
+.card .card__menuContent:hover .menuContent__price {
   right: 70px;
 }
-.card__btn .card__menuContent:hover .menuContent__check {
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .card .card__menuContent:hover .menuContent__price {
+    right: 80px;
+  }
+}
+.card .card__menuContent:hover .menuContent__check {
   visibility: visible;
   width: 17%;
   transition: 0.4s all;
 }
-.card__btn .card__menuContent:hover .menuContent__check--position {
+.card .card__menuContent:hover .menuContent__check--position {
   transition-duration: 0.5s;
   transform: rotate(360deg);
 }
 
 /*Layouts*/
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .container {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .header__return {
   position: absolute;
-  left: 30px;
+  left: 10px;
   color: black;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .header__return {
+    position: absolute;
+    left: 10px;
+  }
 }
 
 .header__logo {
@@ -160,11 +206,6 @@ footer {
   color: white;
   text-align: left;
 }
-@media screen and (max-width: 599px) {
-  footer {
-    display: grid;
-  }
-}
 footer p {
   font-family: "Shrikhand";
 }
@@ -178,6 +219,21 @@ footer span {
 footer a {
   text-decoration: none;
   color: white;
+}
+@media screen and (max-width: 599px) {
+  footer {
+    display: grid;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  footer p {
+    font-size: 20px;
+  }
 }
 
 /*Pages*/
@@ -247,6 +303,14 @@ footer a {
   padding: 20px 15px 40px 15px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 .cardRestaurant {
   position: relative;
   height: 245px;
@@ -314,6 +378,16 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .cardRestaurant {
+    width: 23%;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .cardRestaurant {
+    width: 40%;
+  }
+}
 
 .presentation__restaurant {
   position: relative;
@@ -322,6 +396,11 @@ footer a {
   width: 100%;
   height: 250px;
   object-fit: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .presentation__restaurant .presentation__image {
+    object-position: 0 57%;
+  }
 }
 .presentation__restaurant .presentation__menu {
   position: relative;
@@ -335,10 +414,16 @@ footer a {
 }
 .presentation__restaurant .menu__title {
   display: flex;
+  justify-content: end;
   align-items: baseline;
-  justify-content: space-between;
   padding: 20px;
   font-size: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .presentation__restaurant .menu__title {
+    justify-content: center;
+    font-size: 30px;
+  }
 }
 .presentation__restaurant .menu__title h3 {
   font-family: "Shrikhand";
@@ -364,17 +449,56 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.presentation__restaurant .menu__category .card__btn:nth-child(2) {
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .presentation__restaurant .menuContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .presentation__restaurant .menuContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.presentation__restaurant .menuCategory {
+  margin: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .presentation__restaurant .menuCategory {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .presentation__restaurant .menuCategory {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.presentation__restaurant .cardContainer .card:nth-child(1) {
   animation-duration: 1s;
 }
-.presentation__restaurant .menu__category .card__btn:nth-child(3) {
+.presentation__restaurant .cardContainer .card:nth-child(2) {
   animation-duration: 2s;
 }
-.presentation__restaurant .menu__category .card__btn:nth-child(4) {
+.presentation__restaurant .cardContainer .card:nth-child(3) {
   animation-duration: 3s;
 }
-.presentation__restaurant .menu__category .card__btn:nth-child(5) {
+.presentation__restaurant .cardContainer .card:nth-child(4) {
   animation-duration: 4s;
+}
+@media screen and (min-width: 768px) and (max-width: 2000px) {
+  .presentation__restaurant .cardContainer {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+  .presentation__restaurant .cardContainer {
+    flex-direction: column;
+    width: 70%;
+  }
 }
 .presentation__restaurant .menu__subheading {
   font-weight: 300;

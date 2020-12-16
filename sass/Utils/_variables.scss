@@ -1,5 +1,7 @@
 $breakpoints: (
-    mobile: 599px
+    mobile: 599px,
+    desktop: 2000px,
+    tablette: 768px
 ); 
 
 
@@ -14,7 +16,7 @@ $linear-gradiant: linear-gradient(to left top, $primaryColor, $secondaryColor);
 $linear-gradiant-lighten: linear-gradient(to left top, lighten($primaryColor, 5%),lighten($secondaryColor, 5%) );
 
 //Font 
-
+$font-size: 15px;
 $titleFont : "Shrikhand";
 $titlebody: "Roboto"
 

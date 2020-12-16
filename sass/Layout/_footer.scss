@@ -3,12 +3,10 @@ footer {
     background-color: #353535;
     color: white;
     text-align: left;
-    @include mobile-only {
-        display: grid;
-    }
     p {
         font-family: "Shrikhand";
     }
+    
     i {
         margin: 5px;
     }
@@ -20,4 +18,18 @@ footer {
         text-decoration: none;
         color: white;
     }
+
+    @include mobile-only {
+        display: grid;
+    }
+
+    @include desktop-only {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        p{
+            font-size: 20px;
+        }
+    }
 }
+
