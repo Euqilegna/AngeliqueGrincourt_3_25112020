@@ -93,11 +93,9 @@
 
     @include desktop-only {
         width: 23%;
-
     }
     
     @include tablette-only {
         width: 40%;
-
     }
 }
