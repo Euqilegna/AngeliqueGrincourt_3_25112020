@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__return {
+    position: absolute;
+    left: 10px;
+    color: black;
+    @include desktop-only {
+        position: absolute;
+        left: 10px
+    }
+}
+
+.header__logo {
+    margin: 10px auto;
+    @include mobile-only {
+        width: 40%;
+    }
+}

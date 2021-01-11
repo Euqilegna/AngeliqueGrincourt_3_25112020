@@ -1,0 +1,112 @@
+.card {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 1rem;
+    display: block;
+    margin: 20px auto;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0px 2px 10px #d2d2d2;
+
+    &__fonctionnement {
+        width: 70%;
+        i {
+            color: grey;
+            margin: 5px 10px;
+        }
+        &:hover {
+            background-color: #f5edff;
+            i {
+                color: $primaryColor;
+            }
+        }
+        @include desktop-only {
+            width: 25%;
+        }
+        @include tablette-only {
+            width: 30%;
+        }
+    }
+
+    &__menu {
+        width: 80%;
+        padding: 10px;
+        animation: slide;
+        @keyframes slide {
+            from {
+                top: 20px;
+                opacity: 0;
+            }
+            to {
+                top: 0px;
+                opacity: 1;
+            }
+        }
+        @include desktop-only {
+            width: 100%;
+        }
+    }
+    
+
+    .card__menuContent {
+        .menuContent__title {
+            margin: 3px 0;
+        }
+        .menuContent__description {
+            font-weight: lighter;
+            font-size: 14px;
+            display: block;
+            width: 80%;
+        }
+        .menuContent__price {
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            color: #494949;
+        }
+        .menuContent__check {
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+            height: 100%;
+            width: 0;
+            background-color: #9be3d1;
+            color: white;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            cursor: pointer;
+            &--position {
+                position: absolute;
+                top: 20px;
+                right: 17px;
+                color: white;
+            }
+        }
+        &:hover {
+            .menuContent__description {
+                width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .menuContent__price {
+                right: 70px;
+                @include tablette-only{
+                    right: 80px;
+                }
+            }
+            .menuContent__check {
+                visibility: visible;
+                width: 17%;
+                transition: 0.4s all;
+                &--position {
+                    transition-duration: 0.5s;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

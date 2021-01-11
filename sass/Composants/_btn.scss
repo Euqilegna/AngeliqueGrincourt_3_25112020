@@ -1,0 +1,30 @@
+.btn {
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 30px;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 3px 6px 2px #c3c3c3;
+    cursor: pointer;
+    &--color {
+        background: $linear-gradiant;
+        &:hover {
+            background: $linear-gradiant-lighten;
+            box-shadow: 0px 3px 6px 2px #969696;
+        }
+    }
+    @include desktop-only {
+        width: 15%;
+        margin-top: 40px;
+    }
+
+    @include tablette-only {
+        width: 25%;
+        margin-top: 40px;
+    }
+}
+
+.menu__button {
+    display: flex;
+}
