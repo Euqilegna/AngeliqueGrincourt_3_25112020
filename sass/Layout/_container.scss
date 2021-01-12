@@ -1,0 +1,6 @@
+.container{
+    @include desktop-only {
+        max-width: 1280px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,25 @@
+.fonctionnement {
+    padding-bottom: 30px;
+    h2 {
+        margin: 30px;
+    }
+}
+
+.pastille {
+    position: absolute;
+    background-color: $primaryColor;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    left: -10px;
+    top: 18px;
+    padding: 3px;
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    p {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+}
