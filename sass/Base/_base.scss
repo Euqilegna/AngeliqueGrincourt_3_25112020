@@ -19,10 +19,10 @@ section {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: white;
     z-index : 1;
     visibility: hidden;
-    animation: fadeIn 1s reverse;
+    animation: fadeIn 2s reverse;
 }
 
 .loader {
@@ -31,12 +31,12 @@ section {
     left: 50%;
     right: 50%;
     bottom: 50%;
-    border: 10px solid #f3f3f3;
+    border: 10px solid grey(0, 0, 0, 1);
     border-radius: 50%;
-    border-top: 10px solid black;
+    border-top: 5px solid black;
     width: 70px;
     height: 70px;
-    animation: spin 4s linear infinite;
+    animation: spin 1s linear infinite;
     @include mobile-only {
         left: 40%;
     };
