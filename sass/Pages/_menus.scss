@@ -30,6 +30,10 @@
             justify-content: center;
             font-size: 30px;
         }
+        @include tablette-only {
+            justify-content: center;
+            font-size: 30px;
+        }
         h3 {
             font-family: $titleFont;
         }
@@ -55,6 +59,7 @@
                 }
                 .card__like--liked {
                     visibility: visible;
+                    transition: 1;
                     background: $linear-gradiant;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
